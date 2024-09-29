@@ -81,6 +81,14 @@ header {
   color: var(--tertiary-color);
 }
 
+.backpack {
+  /* scale: 1.5; */
+}
+.backpackOpen {
+  transition: 0.25s;
+  scale: 1.5;
+}
+
 button {
   padding: 0.5em 2em;
   background-color: var(--secondary-color);
