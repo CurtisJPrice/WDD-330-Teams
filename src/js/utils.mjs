@@ -31,3 +31,13 @@ export function qs(selector, parent = document) {
 
     return urlParams.get(param);
   }
+  //create a function 
+  export function renderListWithTemplate(templateFn, parentElement, list, position, clear = false)
+  {
+    const htmlStrings = list.map(templateFn);
+    // if clear is true we need to clear out the contents of the parent.
+    if (clear) {
+      parentElement.innerHTML = "";
+    }
+    parentElement.insertAdjacentHTML(position, htmlStrings.join(""));
+  }
