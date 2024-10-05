@@ -20,7 +20,7 @@ export default class ProductDetails {
       }
  
       renderProductDetails() {
-        const productContainer = document.getElementById('dynamic-product-details');
+        const productContainer = document.querySelector('.product-detail');
     
         if (this.product) {
           productContainer.innerHTML = `<section class="product-detail"> <h3>${this.product.Brand.Name}</h3>
@@ -44,14 +44,14 @@ export default class ProductDetails {
       }
 
       addToCart() {
-        let cart = getLocalStorage("shoppingCart");
+        let cart = getLocalStorage("so-cart");
         const productExists = cart.some((item) => item.Id === this.product.Id);
     
         if (productExists) {
             alert(`${this.product.Name} is already in your cart.`);
         } else {
             cart.push(this.product);
-            setLocalStorage("shoppingCart", cart);
+            setLocalStorage("so-cart", cart);
             alert(`${this.product.Name} has been added to your cart!`);
         }
       }
