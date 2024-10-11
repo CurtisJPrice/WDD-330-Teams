@@ -6,7 +6,6 @@ export default class ShoppingCart {
     this.listElement = listElement;
     this.cartTotalTop = document.querySelector('.cart-total-top');
     this.cartFooter = document.querySelector('.cart-footer');
-    this.cartCheckoutBtn = document.querySelector('.cart-checkout');
   }
 
   init() {
@@ -27,7 +26,6 @@ export default class ShoppingCart {
     });
 
     this.updateCartFooter();
-    this.updateCheckoutButton();
   }
 
   cartItemTemplate(item) {
@@ -71,16 +69,6 @@ export default class ShoppingCart {
     } else {
       this.cartTotalTop.classList.remove('show');
       this.cartFooter.classList.remove('show');
-    }
-  }
-
-  updateCheckoutButton() {
-    const cartItems = this.getCartItems();
-    
-    if (cartItems.length > 0) {
-      this.cartCheckoutBtn.classList.remove('hide');
-    } else {
-      this.cartCheckoutBtn.classList.add('hide');
     }
   }
 }
