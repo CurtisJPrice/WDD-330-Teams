@@ -7,7 +7,3 @@ const shoppingCart = new ShoppingCart('so-cart', cartListElement);
 shoppingCart.init();
 
 loadHeaderFooter();
-
-document.querySelector('.checkout-btn').addEventListener('click', function () {
-  window.location.href = '../checkout/index.html';
-});
