@@ -6,17 +6,40 @@
     <title>Sleep Outside | Home</title>
     <link rel="stylesheet" href="/css/style.css" />
     <script type="module" src="/js/main.js"></script>
+    <script>
+      window.onload = function() {
+          // Show alert message for 20% off
+          //alert('🎉 Welcome! Enjoy 20% off your first purchase!');
+          setTimeout(function(){
+            document.getElementById("signup-msg").style.display="block";
+          },1000)
+          
+      };
+      function closebtn(){
+        document.querySelector("#signup-msg").style.display="none";
+      }
+  </script>
+  <style>
+    span:hover{
+      cursor: pointer;
+    }
+  </style>
   </head>
   <body>
     <header class="divider" id="main-header">
+   
     <div class="signup-btn">
       <a href="/signup.html" class="signup-btn button">SIGN UP</a>
     </div>
   </header>
-  <body>
     <main class="divider">
+      <!--<div id="signup-msg" style="display: none;">
+        <span style="border:2px;" onclick="closebtn()">&times;</span>
+        <p>Welcome!! Please Sign Up!!</p>
+        <button type="button"><a href="signup.html">Click Me!</a></button> 
+      </div> -->
       <div class="hero">
-        <img
+        <img id="image"
           src="/images/banner-sm.jpg"
           srcset="images/banner-sm.jpg 500w, images/banner.jpg"
           alt="image of a high mountain lake"

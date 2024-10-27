@@ -167,6 +167,14 @@ button {
   text-align: center;
 }
 
+  
+.alert-list-msg {
+
+  background-color: darkgrey;
+  
+
+}
+
 /* Category grid container */
 .category-grid {
   display: flex;
@@ -465,5 +473,15 @@ button {
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
+}
+
+#signup-msg {
+    background-color: greenyellow;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    position: relative;
 }
 
